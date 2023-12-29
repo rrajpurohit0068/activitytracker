@@ -102,37 +102,37 @@ WSGI_APPLICATION = 'activitytracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DB_NAME='at'
-DB_USER='bcb4bunp9o5bnbfxtop9'
-DB_PASSWORD='pscale_pw_cX3zEtxf8UbuE9C9tOzotsb2XOTFYEpTQHpyfZHZ7sc'
-DB_HOST='aws.connect.psdb.cloud'
-DB_PORT='3306'
-MYSQL_ATTR_SSL_CA='/etc/ssl/certs/ca-certificates.crt'
+# DB_NAME='at'
+# DB_USER='bcb4bunp9o5bnbfxtop9'
+# DB_PASSWORD='pscale_pw_cX3zEtxf8UbuE9C9tOzotsb2XOTFYEpTQHpyfZHZ7sc'
+# DB_HOST='aws.connect.psdb.cloud'
+# DB_PORT='3306'
+# MYSQL_ATTR_SSL_CA='/etc/ssl/certs/ca-certificates.crt'
 
 
 
-DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': os.environ.get('DB_NAME') or DB_NAME,
-    'HOST': os.environ.get('DB_HOST') or DB_HOST,
-    'PORT': os.environ.get('DB_PORT') or DB_PORT,
-    'USER': os.environ.get('DB_USER') or DB_USER,
-    'PASSWORD': os.environ.get('DB_PASSWORD') or DB_PASSWORD,
-    'OPTIONS': {'charset': 'utf8mb4','ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA') or MYSQL_ATTR_SSL_CA }}
-  }
-}
-
-
-
-
-# PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(PROJECT_DIR, 'db.sqlite3'),
-#     }
+#   'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': os.environ.get('DB_NAME') or DB_NAME,
+#     'HOST': os.environ.get('DB_HOST') or DB_HOST,
+#     'PORT': os.environ.get('DB_PORT') or DB_PORT,
+#     'USER': os.environ.get('DB_USER') or DB_USER,
+#     'PASSWORD': os.environ.get('DB_PASSWORD') or DB_PASSWORD,
+#     'OPTIONS': {'charset': 'utf8mb4','ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA') or MYSQL_ATTR_SSL_CA }}
+#   }
 # }
+
+
+
+
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_DIR, 'db.sqlite3'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
