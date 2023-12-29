@@ -102,12 +102,12 @@ WSGI_APPLICATION = 'activitytracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DB_NAME=''
-DB_USER=''
-DB_PASSWORD=''
-DB_HOST=''
-DB_PORT=''
-MYSQL_ATTR_SSL_CA=''
+DB_NAME='at'
+DB_USER='f9376ww5en48mvdztmrn'
+DB_PASSWORD='pscale_pw_YkQQSwyx0VAsuhDI91nMtvbXVqZ0Hit3KhELqLIRdou'
+DB_HOST='aws.connect.psdb.cloud'
+DB_PORT='3306'
+MYSQL_ATTR_SSL_CA='/etc/ssl/certs/ca-certificates.crt'
 
 
 
