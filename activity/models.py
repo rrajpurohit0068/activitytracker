@@ -18,7 +18,7 @@ class Activity(models.Model):
     updated = models.DateTimeField(auto_now=True)
     user_id = models.ForeignKey('users.MyUser',blank=True,
         null=True, on_delete=models.SET_NULL) 
-    proirity = models.IntegerField()
+    priority = models.IntegerField()
     def __str__(self):
         return self.title
 
